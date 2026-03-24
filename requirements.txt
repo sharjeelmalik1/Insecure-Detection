@@ -1,0 +1,9 @@
+# Core application
+Flask>=3.0,<4.0
+PyYAML>=6.0,<7.0
+
+# Security scanning
+bandit>=1.7,<2.0
+
+# Testing
+pytest>=8.0,<9.0

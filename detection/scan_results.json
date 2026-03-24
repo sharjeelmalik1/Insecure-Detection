@@ -1,0 +1,62 @@
+[
+  {
+    "file": "app\\vulnerable_app.py",
+    "line": 65,
+    "col": 18,
+    "severity": "CRITICAL",
+    "category": "insecure-deserialization",
+    "pattern": "pickle.loads",
+    "message": "Call to pickle.loads() on potentially untrusted data. pickle can execute arbitrary code during deserialization.",
+    "remediation": "Use json.loads() or a restricted unpickler instead of pickle."
+  },
+  {
+    "file": "app\\vulnerable_app.py",
+    "line": 112,
+    "col": 17,
+    "severity": "HIGH",
+    "category": "insecure-deserialization",
+    "pattern": "yaml.load",
+    "message": "Call to yaml.load() without SafeLoader. FullLoader and UnsafeLoader allow code execution via YAML tags.",
+    "remediation": "Use yaml.safe_load() or pass Loader=yaml.SafeLoader."
+  },
+  {
+    "file": "app\\vulnerable_app.py",
+    "line": 137,
+    "col": 15,
+    "severity": "CRITICAL",
+    "category": "insecure-deserialization",
+    "pattern": "pickle.loads",
+    "message": "Call to pickle.loads() on potentially untrusted data. pickle can execute arbitrary code during deserialization.",
+    "remediation": "Use json.loads() or a restricted unpickler instead of pickle."
+  },
+  {
+    "file": "exploits\\pickle_payload.py",
+    "line": 135,
+    "col": 13,
+    "severity": "CRITICAL",
+    "category": "insecure-deserialization",
+    "pattern": "pickle.loads",
+    "message": "Call to pickle.loads() on potentially untrusted data. pickle can execute arbitrary code during deserialization.",
+    "remediation": "Use json.loads() or a restricted unpickler instead of pickle."
+  },
+  {
+    "file": "exploits\\pickle_payload.py",
+    "line": 140,
+    "col": 15,
+    "severity": "CRITICAL",
+    "category": "insecure-deserialization",
+    "pattern": "pickle.loads",
+    "message": "Call to pickle.loads() on potentially untrusted data. pickle can execute arbitrary code during deserialization.",
+    "remediation": "Use json.loads() or a restricted unpickler instead of pickle."
+  },
+  {
+    "file": "exploits\\yaml_payload.py",
+    "line": 94,
+    "col": 21,
+    "severity": "HIGH",
+    "category": "insecure-deserialization",
+    "pattern": "yaml.load",
+    "message": "Call to yaml.load() without SafeLoader. FullLoader and UnsafeLoader allow code execution via YAML tags.",
+    "remediation": "Use yaml.safe_load() or pass Loader=yaml.SafeLoader."
+  }
+]
